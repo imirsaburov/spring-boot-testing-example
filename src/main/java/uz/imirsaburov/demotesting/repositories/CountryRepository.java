@@ -10,7 +10,7 @@ import uz.imirsaburov.demotesting.entities.CountryEntity;
 public interface CountryRepository extends JpaRepository<CountryEntity, Long> {
 
     boolean existsByNameContainingIgnoreCase(String name);
-    boolean existsByNameContainingIgnoreCaseAndId(String name, Long id);
+    boolean existsByNameContainingIgnoreCaseAndIdNot(String name, Long id);
 
     Page<CountryEntity> findAllByNameContainingIgnoreCase(String name, Pageable pageable);
 }

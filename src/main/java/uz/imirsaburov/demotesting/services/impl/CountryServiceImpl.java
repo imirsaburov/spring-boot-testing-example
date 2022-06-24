@@ -48,7 +48,7 @@ public class CountryServiceImpl implements CountryService {
     public void update(Long id, UpdateCountryDTO dto) {
         String name = dto.getName();
 
-        if (repository.existsByNameContainingIgnoreCaseAndId(name, id))
+        if (repository.existsByNameContainingIgnoreCaseAndIdNot(name, id))
             throw new CountryNameExistException(name);
 
         CountryEntity entity = getEntityById(id);
