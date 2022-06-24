@@ -15,5 +15,5 @@ spring:
     driverClassName: 'org.h2.Driver'
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: 'create-drop'
 

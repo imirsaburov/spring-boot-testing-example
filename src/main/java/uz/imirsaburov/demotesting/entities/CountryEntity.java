@@ -21,5 +21,6 @@ public class CountryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true, name = "name")
     private String name;
 }

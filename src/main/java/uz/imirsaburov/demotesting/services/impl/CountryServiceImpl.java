@@ -51,7 +51,7 @@ public class CountryServiceImpl implements CountryService {
         if (repository.existsByNameContainingIgnoreCaseAndId(name, id))
             throw new CountryNameExistException(name);
 
-        CountryEntity entity = new CountryEntity();
+        CountryEntity entity = getEntityById(id);
         entity.setName(name);
         repository.save(entity);
     }
