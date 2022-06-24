@@ -7,6 +7,6 @@ import uz.imirsaburov.demotesting.exceptions.BaseException;
 public class CountryNameExistException extends BaseException {
 
     public CountryNameExistException(String name) {
-        super("Country name exist : ".concat(name), HttpStatus.NOT_FOUND, ErrorCode.COUNTRY_NAME_EXIST);
+        super("Country name exist : ".concat(name), HttpStatus.BAD_REQUEST, ErrorCode.COUNTRY_NAME_EXIST);
     }
 }

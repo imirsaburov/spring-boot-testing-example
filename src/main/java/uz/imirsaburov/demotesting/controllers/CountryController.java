@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Min;
 
 @RestController(value = "country-controller")
-@RequestMapping("v1/country")
+@RequestMapping("/v1/country")
 @RequiredArgsConstructor
 @Validated
 public class CountryController {
